@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-security-practice-2
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_spring_security
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+
