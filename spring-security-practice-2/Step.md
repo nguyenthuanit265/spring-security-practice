@@ -5,15 +5,34 @@
 ```
 jdbc:mysql://localhost:3306/db_spring_security?allowPublicKeyRetrieval=true&useSSL=false
 
-- docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQL_DATABASE=db_spring_security -d -p 3306:3306 -v mysql-data:/var/lib/mysql mysql
+- docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=db_spring_security -d -p 3306:3306 -v mysql-data:/var/lib/mysql mysql
 
+```
+
+- Config
+
+```
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-security-practice-2
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_spring_security
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 ```
 
 - Define file application.yml: port, url datasource, username, password, jpa config
 - Tạo entity User, Role
 - Mapping entity class + table
 - Cấu hình Spring Security
-- Viết 2 API sign-up, login trong AuthController
+- Viết API: /sign-up, /login, /admins/profile, users/profile
+- Sử dụng Basic Auth
 
 ### Buoi 2
 
