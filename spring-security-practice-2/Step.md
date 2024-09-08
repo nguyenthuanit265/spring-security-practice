@@ -27,3 +27,5 @@ jdbc:mysql://localhost:3306/db_spring_security?allowPublicKeyRetrieval=true&useS
 
 - Viết class JwtTokenUtils -> validate token, generate token,...
 - Implement API /login return JWT
+- Phân quyền trên URL
+- Phân quyền trên method
