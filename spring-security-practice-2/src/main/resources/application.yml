@@ -16,3 +16,9 @@ spring:
       - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
       - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
 
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+        web: DEBUG
