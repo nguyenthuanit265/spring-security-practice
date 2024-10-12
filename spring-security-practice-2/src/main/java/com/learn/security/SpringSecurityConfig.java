@@ -78,7 +78,7 @@ public class SpringSecurityConfig {
         http.httpBasic(Customizer.withDefaults());
         http.csrf(csrf -> csrf.ignoringRequestMatchers("/api/**"))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/sign-up", "api/v1/auth/login").permitAll()
+                        .requestMatchers("/api/v1/auth/sign-up", "/api/v1/auth/login").permitAll()
                         .requestMatchers("/api/v1/admins/**").hasRole("ADMIN")
                         .requestMatchers("/api/v1/users/**").hasAnyRole("USER", "ADMIN")
                         .anyRequest().authenticated()
